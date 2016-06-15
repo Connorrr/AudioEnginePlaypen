@@ -14,6 +14,37 @@
 		BFFEEDFE1D111F4200BB24D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFEEDFC1D111F4200BB24D1 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BFFEEE0C1D1120B300BB24D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFFEEE051D1120B300BB24D1 /* TheAmazingAudioEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CDCAC981CA25A29008AAEF1;
+			remoteInfo = TheAmazingAudioEngine;
+		};
+		BFFEEE0E1D1120B300BB24D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFFEEE051D1120B300BB24D1 /* TheAmazingAudioEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C9F0F741CB265F90032903E;
+			remoteInfo = "TheAmazingAudioEngine OS X";
+		};
+		BFFEEE101D1120B300BB24D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFFEEE051D1120B300BB24D1 /* TheAmazingAudioEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C9F0FBC1CB269C30032903E;
+			remoteInfo = "TheAmazingAudioEngine tvOS";
+		};
+		BFFEEE121D1120B300BB24D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFFEEE051D1120B300BB24D1 /* TheAmazingAudioEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CDCACA81CA25A6E008AAEF1;
+			remoteInfo = Tests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		BFFEEDF01D111F4200BB24D1 /* AudioEnginePlaypen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioEnginePlaypen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFEEDF31D111F4200BB24D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +53,7 @@
 		BFFEEDFA1D111F4200BB24D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFFEEDFD1D111F4200BB24D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFFEEDFF1D111F4200BB24D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFFEEE051D1120B300BB24D1 /* TheAmazingAudioEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = TheAmazingAudioEngine.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +72,7 @@
 			children = (
 				BFFEEDF21D111F4200BB24D1 /* AudioEnginePlaypen */,
 				BFFEEDF11D111F4200BB24D1 /* Products */,
+				BFFEEE051D1120B300BB24D1 /* TheAmazingAudioEngine.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +95,17 @@
 				BFFEEDFF1D111F4200BB24D1 /* Info.plist */,
 			);
 			path = AudioEnginePlaypen;
+			sourceTree = "<group>";
+		};
+		BFFEEE061D1120B300BB24D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFFEEE0D1D1120B300BB24D1 /* libTheAmazingAudioEngine.a */,
+				BFFEEE0F1D1120B300BB24D1 /* libTheAmazingAudioEngine OS X.a */,
+				BFFEEE111D1120B300BB24D1 /* libTheAmazingAudioEngine tvOS.a */,
+				BFFEEE131D1120B300BB24D1 /* Tests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,12 +155,49 @@
 			mainGroup = BFFEEDE71D111F4200BB24D1;
 			productRefGroup = BFFEEDF11D111F4200BB24D1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BFFEEE061D1120B300BB24D1 /* Products */;
+					ProjectRef = BFFEEE051D1120B300BB24D1 /* TheAmazingAudioEngine.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BFFEEDEF1D111F4200BB24D1 /* AudioEnginePlaypen */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BFFEEE0D1D1120B300BB24D1 /* libTheAmazingAudioEngine.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTheAmazingAudioEngine.a;
+			remoteRef = BFFEEE0C1D1120B300BB24D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BFFEEE0F1D1120B300BB24D1 /* libTheAmazingAudioEngine OS X.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libTheAmazingAudioEngine OS X.a";
+			remoteRef = BFFEEE0E1D1120B300BB24D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BFFEEE111D1120B300BB24D1 /* libTheAmazingAudioEngine tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libTheAmazingAudioEngine tvOS.a";
+			remoteRef = BFFEEE101D1120B300BB24D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BFFEEE131D1120B300BB24D1 /* Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Tests.xctest;
+			remoteRef = BFFEEE121D1120B300BB24D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BFFEEDEE1D111F4200BB24D1 /* Resources */ = {
