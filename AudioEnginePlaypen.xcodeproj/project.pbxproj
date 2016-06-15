@@ -12,6 +12,8 @@
 		BFFEEDF91D111F4200BB24D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFEEDF71D111F4200BB24D1 /* Main.storyboard */; };
 		BFFEEDFB1D111F4200BB24D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFFEEDFA1D111F4200BB24D1 /* Assets.xcassets */; };
 		BFFEEDFE1D111F4200BB24D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFEEDFC1D111F4200BB24D1 /* LaunchScreen.storyboard */; };
+		BFFEEE171D11215D00BB24D1 /* AEAudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFEEE161D11215D00BB24D1 /* AEAudioController.m */; };
+		BFFEEE1A1D1122B000BB24D1 /* libTheAmazingAudioEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFEEE0D1D1120B300BB24D1 /* libTheAmazingAudioEngine.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		BFFEEDFD1D111F4200BB24D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFFEEDFF1D111F4200BB24D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFFEEE051D1120B300BB24D1 /* TheAmazingAudioEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = TheAmazingAudioEngine.xcodeproj; sourceTree = "<group>"; };
+		BFFEEE141D11215C00BB24D1 /* AudioEnginePlaypen-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AudioEnginePlaypen-Bridging-Header.h"; sourceTree = "<group>"; };
+		BFFEEE151D11215D00BB24D1 /* AEAudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEAudioController.h; sourceTree = "<group>"; };
+		BFFEEE161D11215D00BB24D1 /* AEAudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEAudioController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFFEEE1A1D1122B000BB24D1 /* libTheAmazingAudioEngine.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +76,8 @@
 		BFFEEDE71D111F4200BB24D1 = {
 			isa = PBXGroup;
 			children = (
+				BFFEEE191D11218D00BB24D1 /* Classes */,
+				BFFEEE181D11218200BB24D1 /* Support */,
 				BFFEEDF21D111F4200BB24D1 /* AudioEnginePlaypen */,
 				BFFEEDF11D111F4200BB24D1 /* Products */,
 				BFFEEE051D1120B300BB24D1 /* TheAmazingAudioEngine.xcodeproj */,
@@ -106,6 +114,23 @@
 				BFFEEE131D1120B300BB24D1 /* Tests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BFFEEE181D11218200BB24D1 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BFFEEE141D11215C00BB24D1 /* AudioEnginePlaypen-Bridging-Header.h */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		BFFEEE191D11218D00BB24D1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BFFEEE151D11215D00BB24D1 /* AEAudioController.h */,
+				BFFEEE161D11215D00BB24D1 /* AEAudioController.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFFEEE171D11215D00BB24D1 /* AEAudioController.m in Sources */,
 				BFFEEDF61D111F4200BB24D1 /* ViewController.swift in Sources */,
 				BFFEEDF41D111F4200BB24D1 /* AppDelegate.swift in Sources */,
 			);
@@ -281,6 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -320,6 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -331,10 +359,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AudioEnginePlaypen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.connorrr.AudioEnginePlaypen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AudioEnginePlaypen-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -342,10 +373,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AudioEnginePlaypen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.connorrr.AudioEnginePlaypen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AudioEnginePlaypen-Bridging-Header.h";
 			};
 			name = Release;
 		};
